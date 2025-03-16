@@ -1,20 +1,24 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { picture, picture1, picture2, picture3, picture4 } from '../assets';
-import { Link } from 'react-router-dom';
+import { picture,picture1,picture2,picture3,picture4} from '../assets';
+import { Link } from 'react-router-dom'; 
 import SectionWrapper from './SectionWrapper';
+// Add your own images by putting them in the assets folder and import them.
+const images = [
+ picture,
+ picture1,
+ picture2,
+ picture3,
+ picture4,
 
-const images = [picture, picture1, picture2, picture3, picture4];
-
+];
 function Picture() {
   const [loadedImages, setLoadedImages] = useState(0);
 
   const handleImageLoad = () => {
     setLoadedImages((prev) => prev + 1);
   };
-
   const allImagesLoaded = loadedImages === images.length;
-
   return (
     <SectionWrapper>
       <Link to="/card">
@@ -45,15 +49,12 @@ function Picture() {
             rotate: Math.random() * 20 - 10,
           }}
           drag
-          dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-          dragElastic={0.7} // Adjust this value for sensitivity
         >
           <img
             src={image}
             alt={`Stacked image ${index + 1}`}
             className="w-full h-full object-cover rounded-lg shadow-lg"
-            onLoad={handleImageLoad}
-            loading="lazy" // Lazy load images
+            onLoad={handleImageLoad} // Increment the counter when the image loads
           />
         </motion.div>
       ))}
