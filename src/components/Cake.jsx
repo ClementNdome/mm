@@ -40,7 +40,7 @@ function Cake() {
       const averageLowFrequency = lowFrequencyValues.reduce((sum, value) => sum + value, 0) / lowFrequencyValues.length;
       
       const blowThreshold = 100; // Moderate threshold
-      const requiredDuration = 1500; // 1. 5 sec blow required
+      const requiredDuration = 100; // 1. 5 sec blow required
 
       if (averageLowFrequency > blowThreshold) {
         if (!blowStartTime) {
@@ -99,6 +99,7 @@ function Cake() {
           <text fontSize="40" fill="white" textAnchor="middle">
             <textPath href="#curve" startOffset="50%">
               Happy Birthday!
+              
             </textPath>
           </text>
         </svg>
