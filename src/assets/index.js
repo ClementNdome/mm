@@ -1,10 +1,10 @@
 import bg from './bg.jpg'
 
-import picture from './picture.webp'
-import picture1 from './picture1.webp'
-import picture2 from './picture2.webp'
-import picture3 from './picture3.webp'
-import picture4 from './picture4.webp'
+import picture from './picture.jpg'
+import picture1 from './picture1.jpg'
+import picture2 from './picture2.jpg'
+import picture3 from './picture3.jpg'
+import picture4 from './picture4.jpg'
 
 import confetti from './confetti.gif'
 
